@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Store and display historical unrealized PnL
 - Tidy up repeated code into functions
 
+## 2022-01-03
+### Changed
+- Added a composite key to the income table in the database that makes the tradeId and trade reason unique, stopping duplicates from being mistakenly entered into the table from the API. This change requires a fresh DB install currently.
+- Added the Bybit transaction ID to the list for future processing. This requires the transaction ID to be a string instead of a integer.
+
 ## 2021-12-27
 ### Changed
 - Fixed an issue on history page where dowload buttons would cause 500 error when pressed
